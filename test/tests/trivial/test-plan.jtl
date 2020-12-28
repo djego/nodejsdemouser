@@ -1,7 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1609128753602,1189,HTML Page Test,403,Forbidden,Scenario 1 1-1,text,false,Test failed: text expected to contain /demouser/,1290,258,1,1,https://api-dev.utpxpedition.com/,177,0,97
-1609128753602,179,HTML Page Test-0,301,Moved Permanently,Scenario 1 1-1,text,true,,590,129,1,1,http://api-dev.utpxpedition.com/,177,0,97
-1609128753784,1007,HTML Page Test-1,403,Forbidden,Scenario 1 1-1,text,false,,700,129,1,1,https://api-dev.utpxpedition.com/,1007,0,502
-1609128755817,291,HTML Page Test,403,Forbidden,Scenario 1 1-1,text,false,Test failed: text expected to contain /demouser/,1290,258,1,1,https://api-dev.utpxpedition.com/,74,0,0
-1609128755817,74,HTML Page Test-0,301,Moved Permanently,Scenario 1 1-1,text,true,,590,129,1,1,http://api-dev.utpxpedition.com/,74,0,0
-1609128755892,216,HTML Page Test-1,403,Forbidden,Scenario 1 1-1,text,false,,700,129,1,1,https://api-dev.utpxpedition.com/,216,0,0
