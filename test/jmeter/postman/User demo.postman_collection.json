@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "d7d28e5a-ddbc-4058-8e90-7c2336051fe0",
+		"name": "User demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RETRIEVE User 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": {\n    \"zip\": \"zip\",\n    \"country\": \"country\",\n    \"city\": \"city\",\n    \"street\": \"street\",\n    \"id\": 6,\n    \"state\": \"state\"\n  },\n  \"name\": \"name\",\n  \"id\": 10,\n  \"birthDate\": \"birthDate\",\n  \"email\": \"diego@email.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.utpxpedition.com/user/users/createUsers",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"utpxpedition",
+						"com"
+					],
+					"path": [
+						"user",
+						"users",
+						"createUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT User 0",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n        \"zip\": \"zip\",\n        \"country\": \"country\",\n        \"city\": \"city\",\n        \"street\": \"street\",\n        \"id\": 6,\n        \"state\": \"state\"\n    },\n    \"name\": \"name\",\n    \"id\": 0,\n    \"birthDate\": \"birthDate\",\n    \"email\": \"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.utpxpedition.com/user/users/updateUsersById/0",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"utpxpedition",
+						"com"
+					],
+					"path": [
+						"user",
+						"users",
+						"updateUsersById",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User 0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n        \"zip\": \"zip\",\n        \"country\": \"country\",\n        \"city\": \"city\",\n        \"street\": \"street\",\n        \"id\": 6,\n        \"state\": \"state\"\n    },\n    \"name\": \"name\",\n    \"id\": 0,\n    \"birthDate\": \"birthDate\",\n    \"email\": \"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-dev.utpxpedition.com/user/users/deleteUsersById/0",
+					"protocol": "https",
+					"host": [
+						"api-dev",
+						"utpxpedition",
+						"com"
+					],
+					"path": [
+						"user",
+						"users",
+						"deleteUsersById",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
