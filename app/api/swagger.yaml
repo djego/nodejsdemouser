@@ -4,7 +4,7 @@ info:
   description: "Users API"
   version: "1.0.0"
   title: "Users"
-host: "0.0.0.0:3000"
+host: "http://devnetworkLoadBalancer-94fd79188ac79c44.elb.us-east-1.amazonaws.com:9200"
 basePath: "/users"
 schemes:
 - "http"
