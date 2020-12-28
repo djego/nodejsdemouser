@@ -4,7 +4,7 @@ info:
   description: "Users API"
   version: "1.0.0"
   title: "Users"
-host: "localhost:3000"
+host: "0.0.0.0:3000"
 basePath: "/users"
 schemes:
 - "http"
