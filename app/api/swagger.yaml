@@ -1,0 +1,152 @@
+---
+swagger: "2.0"
+info:
+  description: "Users API"
+  version: "1.0.0"
+  title: "Users"
+host: "localhost:3000"
+basePath: "/users"
+schemes:
+- "http"
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /getusers:
+    get:
+      description: "Get all users"
+      operationId: "getusersGET"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/user"
+      x-swagger-router-controller: "Default"
+  /createUsers:
+    post:
+      operationId: "createUsersPOST"
+      parameters:
+      - in: "body"
+        name: "user"
+        required: true
+        schema:
+          $ref: "#/definitions/user"
+      responses:
+        "201":
+          description: "CREATED"
+          schema:
+            $ref: "#/definitions/user"
+        "405":
+          description: "Invalid input"
+      x-swagger-router-controller: "Default"
+  /getusersById/{userId}:
+    get:
+      description: "Get one user"
+      operationId: "getusersByIdUserIdGET"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/user"
+        "400":
+          description: "Invalid user id"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "Default"
+  /updateUsersById/{userId}:
+    put:
+      operationId: "updateUsersByIdUserIdPUT"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      - in: "body"
+        name: "user"
+        required: true
+        schema:
+          $ref: "#/definitions/user"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/user"
+        "400":
+          description: "Invalid user id"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "Default"
+  /deleteUsersById/{userId}:
+    delete:
+      operationId: "deleteUsersByIdUserIdDELETE"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+        "400":
+          description: "Invalid user id"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "Default"
+definitions:
+  user:
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      birthDate:
+        type: "string"
+        format: "LocalDateTime"
+        description: "LocalDateTime type"
+      address:
+        $ref: "#/definitions/address"
+    example:
+      address:
+        zip: "zip"
+        country: "country"
+        city: "city"
+        street: "street"
+        id: 6
+        state: "state"
+      name: "name"
+      id: 0
+      birthDate: "birthDate"
+      email: "email"
+  address:
+    properties:
+      id:
+        type: "integer"
+      street:
+        type: "string"
+      state:
+        type: "string"
+      city:
+        type: "string"
+      country:
+        type: "string"
+      zip:
+        type: "string"
+    example:
+      zip: "zip"
+      country: "country"
+      city: "city"
+      street: "street"
+      id: 6
+      state: "state"
